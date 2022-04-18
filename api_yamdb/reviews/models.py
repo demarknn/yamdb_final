@@ -1,5 +1,5 @@
 from django.contrib.auth.models import (
-    AbstractUser, BaseUserManager, PermissionsMixin)
+    AbstractUser, PermissionsMixin)
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
@@ -15,38 +15,6 @@ class UserRole:
         (ADMIN, 'admin'),
         (MODERATOR, 'moderator'),
     ]
-
-
-class UserManager(BaseUserManager):
-
-    def create_user(
-            self, username, email, password=None, role=None, bio=None):
-        user = self.model(
-            username=username,
-            email=self.normalize_email(email),
-        )
-        if role == UserRole.MODERATOR:
-            user.is_staff = True
-        if role == UserRole.ADMIN:
-            user.is_superuser = True
-        user.role
-        user.set_password(password)
-        user.bio
-        user.save()
-        return user
-
-    def create_superuser(
-            self, username, email, password=None, role=None, bio=None):
-        user = self.model(
-            username=username,
-            email=self.normalize_email(email),
-        )
-        user.role
-        user.set_password(password)
-        user.bio
-        user.is_superuser = True
-        user.save()
-        return user
 
 
 class User(AbstractUser, PermissionsMixin):
@@ -72,9 +40,10 @@ class User(AbstractUser, PermissionsMixin):
         verbose_name='Код подтверждения'
     )
     is_superuser = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=True)
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
-    objects = UserManager()
 
     def __str__(self):
         return self.username
