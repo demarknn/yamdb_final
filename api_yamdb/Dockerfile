@@ -8,7 +8,7 @@ COPY requirements.txt .
 
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
-COPY . .
+COPY api_yamdb/ /app
 
 
 
