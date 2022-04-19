@@ -1,8 +1,8 @@
 FROM python:3.7-slim
 
-#RUN mkdir /app
+# RUN mkdir /app
 WORKDIR /app
-COPY requirements.txt .
+COPY requirements.txt /app/requirements.txt
 
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
