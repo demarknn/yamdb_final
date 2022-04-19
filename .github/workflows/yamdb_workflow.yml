@@ -63,3 +63,5 @@ jobs:
             tags: demarknn/api_yamdb_final:latest
             context: .
             file: api_yamdb/Dockerfile
+            cache-from: type=gha
+            cache-to: type=gha,mode=max
