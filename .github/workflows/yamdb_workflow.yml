@@ -62,4 +62,4 @@ jobs:
             push: true
             tags: demarknn/api_yamdb_final:latest
             context: .
-            file: ../api_yamdb/Dockerfile
+            file: api_yamdb/Dockerfile
