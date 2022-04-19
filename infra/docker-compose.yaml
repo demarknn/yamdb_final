@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  dockerfile: ../api_yamdb/Dockerfile
   db:
     image: postgres:13.0-alpine
     volumes:
