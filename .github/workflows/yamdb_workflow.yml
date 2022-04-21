@@ -72,7 +72,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        # passphrase: ${{ secrets.PASSPHRASE }} ssh-клюdfdfdfч заrtrtrщищён фразой-паролемываывавыsd
+        # passphrase: ${{ secrets.PASSPHRASE }} ssh-кdfч заrtrtrщищён фразой-паролемываывавыsd
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull demarknn/api_yamdb_final
