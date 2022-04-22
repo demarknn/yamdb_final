@@ -85,7 +85,6 @@ class Title(models.Model):
     year = models.IntegerField(
         'Год выхода',
         null=True,
-        validators=[validate_year]
     )
     description = models.CharField(
         'Описание', max_length=512, blank=True, null=True
