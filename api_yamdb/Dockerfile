@@ -1,12 +1,33 @@
 FROM python:3.7-slim
 
+# Создать директорию вашего приложения.
+RUN mkdir /app
+
+# Скопировать с локального компьютера файл зависимостей
+# в директорию /app.
+COPY requirements.txt /app
+
+# Выполнить установку зависимостей внутри контейнера.
+RUN pip3 install -r /app/requirements.txt --no-cache-dir
+
+# Скопировать содержимое директории /api_yamdb c локального компьютера
+# в директорию /app.
+COPY api_yamdb/ /app
+
+# Сделать директорию /app рабочей директорией. 
 WORKDIR /app
 
-COPY api_yamdb/requirements.txt api_yamdb/app/
+# Выполнить запуск сервера разработки при старте контейнера.
+CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
 
-RUN pip3 install -r api_yamdb/app/requirements.txt --no-cache-dir
+# FROM python:3.7-slim
 
-COPY api_yamdb/ api_yamdb/app/
+# WORKDIR /app
 
-CMD ["gunicorn", "/api_yamdb/api_yamdb.wsgi:application", "--bind", "0:5000" ] 
+# COPY api_yamdb/requirements.txt api_yamdb/app/
+
+# RUN pip3 install -r api_yamdb/app/requirements.txt --no-cache-dir
+
+# COPY api_yamdb/ api_yamdb/app/
+
 # CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:5000" ] 
