@@ -4,6 +4,8 @@ RUN mkdir /app
 
 COPY api_yamdb/requirements.txt /app
 
+COPY api_yamdb/yamdb_workflow.yml /app
+
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
 COPY api_yamdb/ /app
