@@ -10,4 +10,5 @@ COPY api_yamdb/ api_yamdb/app/
 
 RUN cd api_yamdb/app/
 
-CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:5000" ] 
+CMD ["gunicorn", "api_yamdb.wsgi:app", "--bind", "0:5000" ] 
+# CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:5000" ] 
