@@ -3,8 +3,6 @@ from django.contrib.auth.models import (
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
-from .validators import validate_year
-
 
 class UserRole:
     USER = 'user'
