@@ -24,7 +24,6 @@ jobs:
         python manage.py test
     - name: Test with pytest
       run: |
-        cd api_yamdb/
         pytest
 
   build_and_push_to_docker_hub:
