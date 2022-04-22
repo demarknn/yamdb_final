@@ -23,7 +23,7 @@ jobs:
         cd api_yamdb/
         python manage.py test
     - name: Test with pytest
-      run: 
+      run: |
         cd api_yamdb/
         pytest
 
