@@ -2,9 +2,16 @@
 
 ![example workflow](https://github.com/demarknn/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+## Адрес проекта
+
+http://yamdb.demarknn.ru/api/v1/
+http://yamdb.demarknn.ru/admin/
+http://yamdb.demarknn.ru/redoc/
+
+
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles). 
 Произведения делятся на категории: «Книги», «Фильмы», «Музыка».
-К проекту по адресу http://127.0.0.1/redoc/ подключена документация API YaMDb. 
+К проекту по адресу http://yamdb.demarknn.ru/redoc/ подключена документация API YaMDb. 
 В ней описаны возможные запросы к API и структура ожидаемых ответов. 
 Для каждого запроса указаны уровни прав доступа: пользовательские роли, которым разрешён запрос.
 
