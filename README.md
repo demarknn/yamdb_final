@@ -4,7 +4,7 @@
 
 ## Адрес проекта
 
-http://yamdb.demarknn.ru/api/v1/
+http://yamdb.demarknn.ru/api/v1/auth/signup/
 
 http://yamdb.demarknn.ru/admin/
 
