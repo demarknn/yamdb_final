@@ -10,6 +10,7 @@ http://yamdb.demarknn.ru/admin/
 
 http://yamdb.demarknn.ru/redoc/
 
+http://yamdb.demarknn.ru/api/v1/categories/
 
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles). 
 Произведения делятся на категории: «Книги», «Фильмы», «Музыка».
