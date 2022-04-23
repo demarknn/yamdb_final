@@ -5,7 +5,9 @@
 ## Адрес проекта
 
 http://yamdb.demarknn.ru/api/v1/
+
 http://yamdb.demarknn.ru/admin/
+
 http://yamdb.demarknn.ru/redoc/
 
 
